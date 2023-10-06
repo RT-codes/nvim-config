@@ -27,6 +27,9 @@ Plug 'dense-analysis/ale'                                     "for linting
 Plug 'sbdchd/neoformat'                                       "to use :Neoformat
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } "for autocompletion
 Plug 'fedepujol/move.nvim'                                    "for moving lines
+Plug 'lukas-reineke/indent-blankline.nvim'                     "for indent lines
+Plug 'nvim-lua/plenary.nvim'
+Plug 'ThePrimeagen/harpoon'
 call plug#end()
 
 
@@ -65,6 +68,10 @@ set ttyfast                 " Speed up scrolling in Vim
 
 
 " ------------------- Plugin Settings -------------------
+
+
+" ------------------- indent-blankline ------------------
+let g:indent_blankline_enabled = 1
 
 " ------------------- Copilot ---------------------------
 nnoremap <leader>cc :Copilot complete<CR>
@@ -124,5 +131,6 @@ function! ToggleALELinter()
 endfunction
 
 command! ALEToggle call ToggleALELinter()
+
 
 
